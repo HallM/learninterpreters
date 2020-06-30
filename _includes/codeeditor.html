@@ -1,0 +1,12 @@
+<textarea style="display:none" id="codestarttext_{{ include.blockname }}">{% for line in include.codelines %}{{ line }}
+{% endfor %}</textarea>
+<div id="codecontainer_{{ include.blockname }}" style="width:100%;height:600px;border:1px solid grey"></div>
+
+<script>
+  require(['vs/editor/editor.main'], function() {
+      var editor = monaco.editor.create(document.getElementById('codecontainer_{{ include.blockname }}'), {
+          value: document.getElementById('codestarttext_{{ include.blockname }}').innerText,
+          language: 'javascript'
+      });
+  });
+</script>

@@ -1,0 +1,12 @@
+{
+  "codeblocks": [
+    {
+      "blockname": "block1",
+      "lines": [
+        "function hello() {",
+        "  alert('Hello world!');",
+        "}"
+      ]
+    }
+  ]
+}
